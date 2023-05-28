@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <ion-title>
+      
+      Fotos Por Salud
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <img [src]="selectedImage?.webPath" *ngIf="isLogo == false"/>
+  <ion-list class="au-form" expand="block" *ngIf="isLogo == false">
+    <ion-item>
+      <ion-textarea label="Título de Imagen" placeholder="Describe tu imagen"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-button clear size="default" expand="block" class="text-button">Guardar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <img src="../assets/logo.png" style="display:inline-block" horizontal="center" vertical="center" slot="fixed" opacity="0.4" class="image-background"
+  *ngIf="isPhoto == false" />
+  
+
+  <!-- ion-button vertical="bottom" horizontal="center" slot="fixed" expand="block" class="ion-margin"
+  (click)="takePicture()">Toma Una Foto</ion-button -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" background="#82b417">
+    <ion-fab-button (click)="takePicture()" >
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

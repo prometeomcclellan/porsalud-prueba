@@ -1,0 +1,7 @@
+{
+  "name": "porsalud-cam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

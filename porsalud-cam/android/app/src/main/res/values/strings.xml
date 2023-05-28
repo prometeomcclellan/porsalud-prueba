@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">camara porsalud</string>
+    <string name="title_activity_main">camara porsalud</string>
+    <string name="package_name">tg.hn.porsalud.camara</string>
+    <string name="custom_url_scheme">tg.hn.porsalud.camara</string>
+</resources>
