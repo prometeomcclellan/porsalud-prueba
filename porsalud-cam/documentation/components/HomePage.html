@@ -143,10 +143,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#convertBlobToBase64" >convertBlobToBase64</a>
-                            </li>
-                            <li>
                                 <a href="#descrip" >descrip</a>
                             </li>
                             <li>
@@ -192,15 +188,15 @@
                                 <a href="#checkPlatformForWeb" >checkPlatformForWeb</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBase64Data" >getBase64Data</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
                                 <a href="#processNextHandler" >processNextHandler</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                    <span class="modifier">Async</span>
-                                <a href="#readAsBase64" >readAsBase64</a>
                             </li>
                             <li>
                                 <a href="#saveDescription" >saveDescription</a>
@@ -311,8 +307,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">src/app/home/home.page.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/home/home.page.ts:83</a></div>
                 </td>
             </tr>
 
@@ -360,6 +356,78 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBase64Data"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getBase64Data</b></span>
+                        <a href="#getBase64Data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBase64Data(photo: Photo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">src/app/home/home.page.ts:141</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>photo</td>
+                                    <td>
+                                            <code>Photo</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -422,8 +490,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="74"
-                            class="link-to-prism">src/app/home/home.page.ts:74</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/home/home.page.ts:69</a></div>
                 </td>
             </tr>
 
@@ -434,78 +502,6 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="readAsBase64"></a>
-                    <span class="name">
-                        <span class="modifier">Private</span>
-                        <span class="modifier">Async</span>
-                        <span ><b>readAsBase64</b></span>
-                        <a href="#readAsBase64"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>readAsBase64(photo: Photo)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="135"
-                            class="link-to-prism">src/app/home/home.page.ts:135</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>photo</td>
-                                    <td>
-                                            <code>Photo</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>unknown</code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -531,8 +527,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">src/app/home/home.page.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/home/home.page.ts:74</a></div>
                 </td>
             </tr>
 
@@ -563,15 +559,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>savePicture(photo: Photo, filename: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    <code>savePicture(photo: Photo)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="116"
-                            class="link-to-prism">src/app/home/home.page.ts:116</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/home/home.page.ts:110</a></div>
                 </td>
             </tr>
 
@@ -603,18 +599,6 @@
 
 
                                 </tr>
-                                <tr>
-                                    <td>filename</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -637,32 +621,6 @@
     <h3 id="inputs">
         Properties
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="convertBlobToBase64"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>convertBlobToBase64</b></span>
-                        <a href="#convertBlobToBase64"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/app/home/home.page.ts:145</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -887,7 +845,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/home/home.page.ts:94</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app/home/home.page.ts:87</a></div>
                         </td>
                     </tr>
 
@@ -901,8 +859,8 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-import { Filesystem, Directory, Encoding } from &#x27;@capacitor/filesystem&#x27;;
-import { Camera, CameraResultType, CameraSource, Photo } from &quot;@capacitor/camera&quot;;
+import { Camera, CameraResultType, CameraSource, Photo } from &#x27;@capacitor/camera&#x27;;
+import { Filesystem, Directory } from &#x27;@capacitor/filesystem&#x27;;
 import { Capacitor } from &#x27;@capacitor/core&#x27;;
 import { Platform } from &#x27;@ionic/angular&#x27;;
 import { App } from &#x27;@capacitor/app&#x27;;
@@ -967,12 +925,7 @@ export class HomePage {
     return false;
   }
 
-  /*printCurrentPosition &#x3D; async () &#x3D;&gt; {
-    const coordinates &#x3D; await Geolocation.getCurrentPosition();
   
-    console.log(&#x27;Current position:&#x27;, coordinates);
-  };
-*/
   processNextHandler(){
     this.isPhoto &#x3D; false;
     this.isLogo &#x3D; true;
@@ -991,8 +944,86 @@ export class HomePage {
 
   }
 
+  takePicture &#x3D; async () &#x3D;&gt; {
+    this.isText &#x3D; false;
+    this.descrip &#x3D; &#x27;&#x27;;
+    const image &#x3D; await Camera.getPhoto({
+      quality: 90,
+      source: CameraSource.Prompt,
+      width: 600,
+      resultType: this.checkPlatformForWeb() ? CameraResultType.DataUrl : CameraResultType.Uri
+    });
   
-
+    console.log(&#x27;image:&#x27;, image);
+    this.selectedImage &#x3D; image;
+    if (this.checkPlatformForWeb()) {
+      this.selectedImage.webPath &#x3D; image.dataUrl;
+    }
+  
+    if (image) {
+      this.isPhoto &#x3D; true;
+      this.isLogo &#x3D; false;
+      await this.savePicture(this.selectedImage);
+    }
+  }
+  
+  async savePicture(photo: Photo) {
+    const fileName &#x3D; new Date().getTime() + &#x27;.jpeg&#x27;; // Generate a unique filename
+    const path &#x3D; &#x60;${Directory.Data}/mis-fotos/${fileName}&#x60;;
+  
+    try {
+      await Filesystem.mkdir({
+        path: &#x27;mis-fotos&#x27;,
+        directory: Directory.Data,
+        recursive: false,
+      });
+    } catch (e) {
+      console.error(&quot;Unable to make directory&quot;, e);
+      return;
+    }
+  
+    const base64Data &#x3D; await this.getBase64Data(photo);
+  
+    try {
+      await Filesystem.writeFile({
+        path: path,
+        data: base64Data,
+        directory: Directory.Data,
+        recursive: true
+      });
+  
+      console.log(&#x27;Photo saved successfully:&#x27;, path);
+    } catch (e) {
+      console.error(&quot;Unable to save photo&quot;, e);
+    }
+  }
+  
+  private async getBase64Data(photo: Photo): Promise&lt;string&gt; {
+    if (this.checkPlatformForWeb()) {
+      return photo.dataUrl?.split(&#x27;,&#x27;)[1] || &#x27;&#x27;;
+    } else {
+      if (photo.webPath) {
+        const response &#x3D; await fetch(photo.webPath);
+        const blob &#x3D; await response.blob();
+        const reader &#x3D; new FileReader();
+  
+        return new Promise&lt;string&gt;((resolve, reject) &#x3D;&gt; {
+          reader.onloadend &#x3D; () &#x3D;&gt; {
+            if (typeof reader.result &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+              resolve(reader.result);
+            } else {
+              reject(new Error(&#x27;Unable to read photo as base64&#x27;));
+            }
+          };
+  
+          reader.readAsDataURL(blob);
+        });
+      } else {
+        return &#x27;&#x27;;
+      }
+    }
+  }
+/*
    takePicture &#x3D; async () &#x3D;&gt; {
     this.isText &#x3D; false;
     this.descrip &#x3D; &#x27;&#x27;;
@@ -1010,7 +1041,8 @@ export class HomePage {
     if(image){
       this.isPhoto &#x3D; true;
       this.isLogo &#x3D; false;
-      this.savePicture(this.selectedImage, fileName);
+
+      await this.savePicture(this.selectedImage, new Date().getTime() + &#x27;.jpeg&#x27;);
     }
     
   }
@@ -1052,6 +1084,7 @@ export class HomePage {
     };
     reader.readAsDataURL(blob);
   });
+  */
 };
 </code></pre>
     </div>
