@@ -1,34 +1,65 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    
     <ion-title>
-      
       Fotos Por Salud
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <ion-button id="open-modal" expand="block" *ngIf="isLogo == false">Agrega Una Descripción</ion-button>
   <img [src]="selectedImage?.webPath" *ngIf="isLogo == false"/>
-  <ion-list class="au-form" expand="block" *ngIf="isLogo == false">
-    <ion-item>
-      <ion-textarea label="Título de Imagen" placeholder="Describe tu imagen"></ion-textarea>
-    </ion-item>
-    <ion-item>
-      <ion-button clear size="default" expand="block" class="text-button">Guardar</ion-button>
-    </ion-item>
-  </ion-list>
+
+
+  
+  
 
   <img src="../assets/logo.png" style="display:inline-block" horizontal="center" vertical="center" slot="fixed" opacity="0.4" class="image-background"
   *ngIf="isPhoto == false" />
   
-
-  <!-- ion-button vertical="bottom" horizontal="center" slot="fixed" expand="block" class="ion-margin"
-  (click)="takePicture()">Toma Una Foto</ion-button -->
   <ion-fab vertical="bottom" horizontal="center" slot="fixed" background="#82b417">
     <ion-fab-button (click)="takePicture()" >
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+  
+
+  <ion-modal
+    #modal
+    trigger="open-modal"
+    [initialBreakpoint]="0.25"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+    *ngIf="isLogo == false">
+    
+      <ng-template>
+        <ion-content>
+          <div class="ion-margin-top" style="background: none !important;">
+            <ion-list class="au-form" expand="block">
+              <ion-item>
+                <ion-textarea placeholder="Describe tu imagen" class="custom" helperText="Máximo 100 caracteres" [counter]="true" [maxlength]="100"
+                [(ngModel)]="descrip" (ngModelChange)="checkChange()"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-button clear size="default" expand="block" class="text-button" (click)="saveDescription(); modal.dismiss()">Guardar</ion-button>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-content>
+      </ng-template>
+    
+  </ion-modal>
+
+  <ion-footer *ngIf="isText == true" slot="fixed">
+    <ion-toolbar>
+      <ion-text color="dark">
+        <h4 #descripcion class="ion-padding">{{descrip}}</h4>
+        <!--h4 #descripcion class="ion-padding">Una excelente imagen para recordar. Una excelente imagen para recordar. Una excelente imagen para recordar.</h4 -->
+      </ion-text>
+      <ion-item>
+        <ion-note slot="end">Mi Ciudad, País, 00/00/00</ion-note>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

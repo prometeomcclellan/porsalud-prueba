@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 import { Camera, CameraResultType, CameraSource, Photo } from "@capacitor/camera";
 import { Capacitor } from '@capacitor/core';
-import { Platform } from '@ionic/angular';
+import { Platform, ModalController } from '@ionic/angular';
 import { App } from '@capacitor/app';
 
 // <preference name="orientation" value="portrait" />
@@ -16,6 +16,7 @@ interface LocalFile {
   data: string;
 }
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -28,6 +29,7 @@ export class HomePage {
   isPhoto: any;
   isLogo: any;
   isText: any;
+  descrip: any;
   
   constructor(private platform: Platform){
     this.platform.backButton.subscribeWithPriority(1, () => {
@@ -40,7 +42,6 @@ export class HomePage {
         App.exitApp();
     
       }
-      
     });
   }
 
@@ -61,10 +62,24 @@ export class HomePage {
     this.isLogo = true;
   }
 
+  saveDescription(){
+    this.isText = true;
+    console.log(this.descrip)
+
+    const locale = window.navigator.language;
+    const country = locale.split('-')[1];
+    console.log('Uyyy que lejos estas!! Allá en :' + country)
+  }
+
+  checkChange(){
+
+  }
+
+  
+
    takePicture = async () => {
-    
-    
-    
+    this.isText = false;
+    this.descrip = '';
     const image = await Camera.getPhoto({
       quality: 90,
       source: CameraSource.Prompt,
@@ -101,16 +116,6 @@ export class HomePage {
     } catch (e) {
       //console.error("Unable to make directory", e);
     }
-    
-    /*
-    const savedFile = await Filesystem.writeFile({
-      path: `${IMG_DIR}/${fileName}`,
-      data: base64Data,
-      directory: Directory.Data
-    });
-
-    console.log('saved file ' + savedFile);
-    */
   }
 
   private async readAsBase64(photo: Photo) {
